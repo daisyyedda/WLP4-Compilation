@@ -1,0 +1,50 @@
+//
+// unhelpful comment
+// 
+int wain(int* begin, int size) {
+  int* arr = NULL;//unhelpful commenta
+  int ifelse = -2 ;
+  int m = 0;
+  int n = 0;
+  int maxFreq = 0;    // unhelpful comment
+  int maxVal = 0;
+  int absMaxVal = 0;
+  int currMax = 0;
+  int absCurrMax = 0;
+  int val = 0;
+  arr = new int[483];
+  while (n < 483) {
+    *(arr + n) = 0;
+    n = n + 1;
+  }
+  while (i < size) {
+    val = *(begin + i);
+    *(arr + val + 241) = *(arr + val + 241) + 1;
+    i = i + 1;
+  }
+  while (m < 483) {
+    if (*(arr + m) > maxFreq) {
+      maxFreq = *(arr + m);
+      maxVal = m - 241;
+      if (m < 241) {
+        absMaxVal = 241 - m;
+      } else {
+        absMaxVal = m - 241;
+      }
+    } else {}
+    if (*(arr + m) == maxFreq) {
+      if (m < 241) {
+        absCurrMax = 241 - m;
+      } else {
+        absCurrMax = m - 241;
+      }
+      if (absMaxVal > absCurrMax) {
+        maxVal =  m - 241;
+        absMaxVal = absCurrMax;
+      } else {} 
+    } else {}
+    m = m + 1;
+  }
+  delete [] arr;
+  return maxVal;
+}

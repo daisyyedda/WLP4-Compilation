@@ -1,0 +1,12 @@
+.ALPHABET
+a-z A-Z !
+.STATES
+start!
+.TRANSITIONS
+start a-z A-Z ! start
+.INPUT
+Words are wonderful!
+Accept these words into your heart!
+.EMPTY
+Computer Science
+Twohundredfourtyone

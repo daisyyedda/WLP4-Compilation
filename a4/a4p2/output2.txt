@@ -1,0 +1,10 @@
+CS241 true
+CS240 true
+CS135 true
+CS999 true
+MATH135 false
+CS000 false
+CO380 false
+CS2 false
+CS24 false
+CS2401 false

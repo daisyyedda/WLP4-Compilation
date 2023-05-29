@@ -1,0 +1,47 @@
+children size: 3
+children size: 1
+children size: 14
+main detected!
+children size: 2
+root type when children size is 2
+varType: int
+children size: 2
+root type when children size is 2
+varType: int*
+children size: 0
+children size: 0
+children size: 1
+root type: 
+children size: 1
+root type: 
+children size: 1
+varType: int
+start BOF procedures EOF
+BOF BOF
+procedures main
+main INT WAIN LPAREN dcl COMMA dcl RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+WAIN wain
+LPAREN (
+dcl type ID
+type INT
+INT int
+ID b : int
+COMMA ,
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID a : int*
+RPAREN )
+LBRACE {
+dcls .EMPTY
+statements .EMPTY
+RETURN return
+expr term : int
+term factor : int
+factor NUM : int
+NUM 241 : int
+SEMI ;
+RBRACE }
+EOF EOF

@@ -1,0 +1,245 @@
+start BOF procedures EOF
+BOF BOF
+procedures main
+main INT WAIN LPAREN dcl COMMA dcl RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+WAIN wain
+LPAREN (
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID a : int*
+COMMA ,
+dcl type ID
+type INT
+INT int
+ID b : int
+RPAREN )
+LBRACE {
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NULL SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls .EMPTY
+dcl type ID
+type INT
+INT int
+ID big : int
+BECOMES =
+NUM 536870912 : int
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID small : int
+BECOMES =
+NUM 16777216 : int
+SEMI ;
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID Big : int*
+BECOMES =
+NULL NULL : int*
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID num : int
+BECOMES =
+NUM 241 : int
+SEMI ;
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int*
+ID Big : int*
+BECOMES =
+expr expr PLUS term : int*
+expr term : int*
+term factor : int*
+factor ID : int*
+ID a : int*
+PLUS +
+term factor : int
+factor ID : int
+ID big : int
+SEMI ;
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr GE expr
+expr term : int*
+term factor : int*
+factor ID : int*
+ID Big : int*
+GE >=
+expr expr MINUS term : int*
+expr term : int*
+term factor : int*
+factor ID : int*
+ID Big : int*
+MINUS -
+term factor : int
+factor ID : int
+ID small : int
+RPAREN )
+LBRACE {
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID num : int
+BECOMES =
+expr expr PLUS term : int
+expr term : int
+term factor : int
+factor ID : int
+ID num : int
+PLUS +
+term factor : int
+factor NUM : int
+NUM 240000 : int
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements .EMPTY
+RBRACE }
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr GE expr
+expr term : int
+term factor : int
+factor ID : int
+ID big : int
+GE >=
+expr expr MINUS term : int
+expr term : int
+term factor : int
+factor ID : int
+ID big : int
+MINUS -
+term factor : int
+factor ID : int
+ID small : int
+RPAREN )
+LBRACE {
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID num : int
+BECOMES =
+expr expr PLUS term : int
+expr term : int
+term factor : int
+factor ID : int
+ID num : int
+PLUS +
+term factor : int
+factor NUM : int
+NUM 1000 : int
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements .EMPTY
+RBRACE }
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr LE expr
+expr term : int*
+term factor : int*
+factor ID : int*
+ID Big : int*
+LE <=
+expr expr PLUS term : int*
+expr term : int*
+term factor : int*
+factor ID : int*
+ID Big : int*
+PLUS +
+term factor : int
+factor ID : int
+ID small : int
+RPAREN )
+LBRACE {
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID num : int
+BECOMES =
+expr expr PLUS term : int
+expr term : int
+term factor : int
+factor ID : int
+ID num : int
+PLUS +
+term factor : int
+factor NUM : int
+NUM 240000000 : int
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements .EMPTY
+RBRACE }
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr LE expr
+expr term : int
+term factor : int
+factor ID : int
+ID big : int
+LE <=
+expr expr PLUS term : int
+expr term : int
+term factor : int
+factor ID : int
+ID big : int
+PLUS +
+term factor : int
+factor ID : int
+ID small : int
+RPAREN )
+LBRACE {
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID num : int
+BECOMES =
+expr expr PLUS term : int
+expr term : int
+term factor : int
+factor ID : int
+ID num : int
+PLUS +
+term factor : int
+factor NUM : int
+NUM 1000000 : int
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements .EMPTY
+RBRACE }
+RETURN return
+expr term : int
+term factor : int
+factor ID : int
+ID num : int
+SEMI ;
+RBRACE }
+EOF EOF

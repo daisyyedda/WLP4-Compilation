@@ -1,0 +1,128 @@
+start BOF procedures EOF
+BOF BOF
+procedures main
+main INT WAIN LPAREN dcl COMMA dcl RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+WAIN wain
+LPAREN (
+dcl type ID
+type INT
+INT int
+ID x : int
+COMMA ,
+dcl type ID
+type INT
+INT int
+ID y : int
+RPAREN )
+LBRACE {
+dcls dcls dcl BECOMES NUM SEMI
+dcls .EMPTY
+dcl type ID
+type INT
+INT int
+ID steps : int
+BECOMES =
+NUM 0 : int
+SEMI ;
+statements statements statement
+statements .EMPTY
+statement WHILE LPAREN test RPAREN LBRACE statements RBRACE
+WHILE while
+LPAREN (
+test expr NE expr
+expr term : int
+term factor : int
+factor ID : int
+ID x : int
+NE !=
+expr term : int
+term factor : int
+factor NUM : int
+NUM 1 : int
+RPAREN )
+LBRACE {
+statements statements statement
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID steps : int
+BECOMES =
+expr expr PLUS term : int
+expr term : int
+term factor : int
+factor ID : int
+ID steps : int
+PLUS +
+term factor : int
+factor NUM : int
+NUM 1 : int
+SEMI ;
+statement IF LPAREN test RPAREN LBRACE statements RBRACE ELSE LBRACE statements RBRACE
+IF if
+LPAREN (
+test expr EQ expr
+expr term : int
+term term PCT factor : int
+term factor : int
+factor ID : int
+ID x : int
+PCT %
+factor NUM : int
+NUM 2 : int
+EQ ==
+expr term : int
+term factor : int
+factor NUM : int
+NUM 0 : int
+RPAREN )
+LBRACE {
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID x : int
+BECOMES =
+expr term : int
+term term SLASH factor : int
+term factor : int
+factor ID : int
+ID x : int
+SLASH /
+factor NUM : int
+NUM 2 : int
+SEMI ;
+RBRACE }
+ELSE else
+LBRACE {
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID x : int
+BECOMES =
+expr expr PLUS term : int
+expr term : int
+term term STAR factor : int
+term factor : int
+factor NUM : int
+NUM 3 : int
+STAR *
+factor ID : int
+ID x : int
+PLUS +
+term factor : int
+factor NUM : int
+NUM 1 : int
+SEMI ;
+RBRACE }
+RBRACE }
+RETURN return
+expr term : int
+term factor : int
+factor ID : int
+ID steps : int
+SEMI ;
+RBRACE }
+EOF EOF

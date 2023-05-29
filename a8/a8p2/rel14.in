@@ -1,0 +1,121 @@
+start BOF procedures EOF
+BOF BOF
+procedures main
+main INT WAIN LPAREN dcl COMMA dcl RPAREN LBRACE dcls statements RETURN expr SEMI RBRACE
+INT int
+WAIN wain
+LPAREN (
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID a : int*
+COMMA ,
+dcl type ID
+type INT
+INT int
+ID b : int
+RPAREN )
+LBRACE {
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NUM SEMI
+dcls dcls dcl BECOMES NULL SEMI
+dcls dcls dcl BECOMES NULL SEMI
+dcls .EMPTY
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID c : int*
+BECOMES =
+NULL NULL : int*
+SEMI ;
+dcl type ID
+type INT STAR
+INT int
+STAR *
+ID d : int*
+BECOMES =
+NULL NULL : int*
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID e : int
+BECOMES =
+NUM 240 : int
+SEMI ;
+dcl type ID
+type INT
+INT int
+ID f : int
+BECOMES =
+NUM 241 : int
+SEMI ;
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements statements statement
+statements .EMPTY
+statement lvalue BECOMES expr SEMI
+lvalue ID : int*
+ID a : int*
+BECOMES =
+expr term : int*
+term factor : int*
+factor AMP lvalue : int*
+AMP &
+lvalue ID : int
+ID e : int
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID : int*
+ID c : int*
+BECOMES =
+expr term : int*
+term factor : int*
+factor ID : int*
+ID a : int*
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID : int*
+ID d : int*
+BECOMES =
+expr term : int*
+term factor : int*
+factor AMP lvalue : int*
+AMP &
+lvalue ID : int
+ID f : int
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue ID : int
+ID b : int
+BECOMES =
+expr term : int
+term factor : int
+factor STAR factor : int
+STAR *
+factor ID : int*
+ID d : int*
+SEMI ;
+statement lvalue BECOMES expr SEMI
+lvalue STAR factor : int
+STAR *
+factor ID : int*
+ID c : int*
+BECOMES =
+expr term : int
+term factor : int
+factor ID : int
+ID b : int
+SEMI ;
+RETURN return
+expr term : int
+term factor : int
+factor ID : int
+ID e : int
+SEMI ;
+RBRACE }
+EOF EOF

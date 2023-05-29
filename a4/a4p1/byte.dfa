@@ -1,0 +1,95 @@
+.ALPHABET
+0-9 
+-
+.STATES
+start
+zero!
+pos_1xx!
+pos_11x!
+pos_111!
+pos_2xx!
+pos_22x!
+pos_222!
+pos_25x!
+pos_255!
+pos_26x!
+pos_3x!
+pos_33!
+pos_max
+neg
+neg_1xx!
+neg_11x!
+neg_111!
+neg_12x!
+neg_128!
+neg_13x!
+neg_2x!
+neg_22!
+neg_min
+.TRANSITIONS
+start   -     neg
+start   0     zero
+start   1     pos_1xx
+pos_1xx 0-9   pos_11x
+pos_11x 0-9   pos_111
+pos_111 0-9   pos_max
+pos_max 0-9   pos_max
+start   2     pos_2xx
+pos_2xx 0-4   pos_22x
+pos_22x 0-9   pos_222
+pos_222 0-9   pos_max
+pos_2xx 5     pos_25x
+pos_25x 0-5   pos_255
+pos_25x 6-9   pos_max
+pos_255 0-9   pos_max
+pos_2xx 6-9   pos_26x
+pos_26x 0-9   pos_max
+start   3-9   pos_3x
+pos_3x  0-9   pos_33
+pos_33  0-9   pos_max
+neg     1     neg_1xx
+neg_1xx 0-1   neg_11x
+neg_11x 0-9   neg_111
+neg_111 0-9   neg_min
+neg_min 0-9   neg_min
+neg_1xx 2     neg_12x
+neg_12x 0-8   neg_128
+neg_128 0-9   neg_min
+neg_12x 9     neg_min
+neg_1xx 3-9   neg_13x
+neg_13x 0-9   neg_min
+neg     2-9   neg_2x
+neg_2x  0-9   neg_22
+neg_22  0-9   neg_min
+.INPUT
+0
+1
+18
+186
+1802
+123
+1233
+2
+20
+23
+238
+255
+256
+265
+2110
+34
+9
+311
+-1
+-12
+-128
+-129
+-13
+-1119
+-154
+-23
+-2333
+-9
+-90
+-901
+.EMPTY
